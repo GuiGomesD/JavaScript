@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Menor palavra</title>
+</head>
+<body>
+    
+    <h1>Tabuada</h1>
+    <section>
+        <button onclick="check()">Iniciar</button>
+    </section>
+    
+
+    <script>
+
+        let words = [];
+        var cont = 0;
+        var menor = '';
+
+        function check(){
+            var word = prompt("Digite uma palavra")
+            
+            if (cont == 0) {
+                menor = word;
+            }
+            
+            if (cont > 0) {
+                if (word.length < menor.length) {
+                    menor = word
+                }
+            }
+            cont++
+            alert(`Menor Palavra: ${menor}`)
+        }
+    </script>
+</body>
+</html>
